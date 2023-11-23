@@ -5979,26 +5979,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nuxt-app@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "nuxt-app@workspace:."
-  dependencies:
-    "@nuxt/devtools": latest
-    "@nuxtjs/tailwindcss": ^6.10.1
-    extendable-media-recorder: ^9.1.4
-    extendable-media-recorder-wav-encoder: ^7.0.100
-    nuxt: ^3.8.2
-    pug: ^3.0.2
-    pug-plain-loader: ^1.1.0
-    replicate: ^0.22.0
-    replicate-webhook-proxy: ^0.0.2
-    stylus: ^0.62.0
-    stylus-loader: ^7.1.3
-    vue: ^3.3.8
-    vue-router: ^4.2.5
-  languageName: unknown
-  linkType: soft
-
 "nuxt@npm:^3.8.2":
   version: 3.8.2
   resolution: "nuxt@npm:3.8.2"
@@ -8697,6 +8677,26 @@ __metadata:
   checksum: 06f1a4c858e4dc4c04a10466f4ccacea30c5a9f8574e5ba3deb9d03fa20e80ca6797f02dad97a988da7cdef96238dbc69c3b6a538156585c74722d996223619e
   languageName: node
   linkType: hard
+
+"voice-cloner@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "voice-cloner@workspace:."
+  dependencies:
+    "@nuxt/devtools": latest
+    "@nuxtjs/tailwindcss": ^6.10.1
+    extendable-media-recorder: ^9.1.4
+    extendable-media-recorder-wav-encoder: ^7.0.100
+    nuxt: ^3.8.2
+    pug: ^3.0.2
+    pug-plain-loader: ^1.1.0
+    replicate: ^0.22.0
+    replicate-webhook-proxy: ^0.0.2
+    stylus: ^0.62.0
+    stylus-loader: ^7.1.3
+    vue: ^3.3.8
+    vue-router: ^4.2.5
+  languageName: unknown
+  linkType: soft
 
 "void-elements@npm:^3.1.0":
   version: 3.1.0

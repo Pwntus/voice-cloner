@@ -21,6 +21,18 @@
             stroke-linecap="round"
             stroke-linejoin="round"
           )
+      a.ml-6(
+        href="https://replicate.com/lucataco/xtts-v2"
+        target="_new"
+        style="display: inline-block;"
+      )
+        svg.w-8.h-8(
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1000 1000"
+        )
+          polygon(points="1000,427.6 1000,540.6 603.4,540.6 603.4,1000 477,1000 477,427.6")
+          polygon(points="1000,213.8 1000,327 364.8,327 364.8,1000 238.4,1000 238.4,213.8")
+          polygon(points="1000,0 1000,113.2 126.4,113.2 126.4,1000 0,1000 0,0")
     .text-base.font-normal.mt-2.text-center(
       class="lg:text-xl lg:mt-4"
     ) Record a sample of your own voice and let AI narrate the text in your own voice.
@@ -30,7 +42,7 @@
       class="lg:mt-4"
     )
 
-    template(v-if="speaker_wav")
+    template(v-if="speaker_wav || true")
       textarea.mt-6(
         v-model="text"
         class="lg:mt-12"
@@ -40,6 +52,14 @@
         :disabled="loading"
         class="lg:mt-4"
       ) {{ loading ? 'Loading...' : 'Speak' }}
+      select.ml-6(
+        v-model="language"
+      )
+        option(
+          v-for="(item, index) in languages"
+          :key="`language-${index}`"
+          :value="item.value"
+        ) {{ item.text }}
 
     .output(
       v-for="(item, index) in predictions"
@@ -81,8 +101,18 @@ export default {
   data: () => ({
     speaker_wav: null,
     text: `AI will probably most likely lead to the end of the world, but in the meantime, there'll be great companies.`,
+    language: 'en',
 
     loading: false,
+    languages: [
+      { text: 'English', value: 'en' },
+      { text: 'Spanish', value: 'es' },
+      { text: 'French', value: 'fr' },
+      { text: 'German', value: 'de' },
+      { text: 'Italian', value: 'it' },
+      { text: 'Russian', value: 'ru' },
+      { text: 'Chinese', value: 'zh-cn' }
+    ],
     predictions: []
   }),
   methods: {
@@ -102,6 +132,7 @@ export default {
           body: JSON.stringify({
             speaker_wav: this.speaker_wav,
             text: this.text,
+            language: this.language,
             ws_id
           })
         })

@@ -6,14 +6,14 @@ const replicate = new Replicate({
 
 export default defineEventHandler(async (event) => {
   try {
-    const { speaker_wav, text, ws_id } = await readBody(event)
+    const { speaker_wav, text, language, ws_id } = await readBody(event)
     console.log(`--- log: text = ${text}`)
 
     let prediction
     const input = {
-      text,
       speaker_wav,
-      language: 'en'
+      text,
+      language
     }
 
     if (process.env.REPLICATE_USE_DEPLOYMENT) {
