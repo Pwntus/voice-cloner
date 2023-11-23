@@ -100,7 +100,7 @@ export default {
   name: 'App',
   data: () => ({
     speaker_wav: null,
-    text: `AI will probably most likely lead to the end of the world, but in the meantime, there'll be great companies.`,
+    text: `This is not my real voice, but perhaps it's pretty close to the real one?`,
     language: 'en',
 
     loading: false,
