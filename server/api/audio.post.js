@@ -13,8 +13,8 @@ export default defineEventHandler(async (event) => {
     const input = {
       speaker,
       text,
-      language
-      // cleanup_voice: true
+      language,
+      cleanup_voice: true
     }
 
     if (process.env.REPLICATE_USE_DEPLOYMENT) {
