@@ -36,7 +36,7 @@ export default defineEventHandler(async (event) => {
       prediction = await replicate.predictions.create({
         // lucataco/xtts-v2
         version:
-          '448485e6a4335b184c22e51e699e251bb3c03bc247cd25beee92017af6a08cbd',
+          '6b2385a9c081443f17041bf1a4caeb36393903f4d7e94468f32e90b2ec57ffc2',
         input,
         webhook: `https://r3swiuknhh.execute-api.eu-west-1.amazonaws.com/prod/webhook?key=${ws_id}&type=audio`,
         webhook_events_filter: ['completed']
