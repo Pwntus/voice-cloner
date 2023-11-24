@@ -112,8 +112,9 @@ export default {
       { text: 'Italian', value: 'it' },
       { text: 'Russian', value: 'ru' },
       { text: 'Dutch', value: 'nl' },
-      { text: 'Arabic', value: 'ar' }
-      // { text: 'Chinese (simplified)', value: 'zh-cn' }
+      { text: 'Arabic', value: 'ar' },
+      { text: 'Chinese (simplified)', value: 'zh' },
+      { text: 'Korean', value: 'ko' }
     ],
     predictions: []
   }),
