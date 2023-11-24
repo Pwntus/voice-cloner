@@ -42,7 +42,7 @@
       class="lg:mt-4"
     )
 
-    template(v-if="speaker_wav")
+    template(v-if="speaker")
       textarea.mt-6(
         v-model="text"
         class="lg:mt-12"
@@ -99,7 +99,7 @@ const client = rwp(ws_id)
 export default {
   name: 'App',
   data: () => ({
-    speaker_wav: null,
+    speaker: null,
     text: `This is not my real voice, but perhaps it's pretty close to the real one?`,
     language: 'en',
 
@@ -119,11 +119,11 @@ export default {
   }),
   methods: {
     onData(data) {
-      this.speaker_wav = data
+      this.speaker = data
     },
     async submit() {
       try {
-        if (!this.speaker_wav || this.text == '') return
+        if (!this.speaker || this.text == '') return
 
         this.loading = true
         const response = await fetch('/api/audio', {
@@ -132,7 +132,7 @@ export default {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            speaker_wav: this.speaker_wav,
+            speaker: this.speaker,
             text: this.text,
             language: this.language,
             ws_id
