@@ -42,7 +42,7 @@
       class="lg:mt-4"
     )
 
-    template(v-if="speaker_wav || true")
+    template(v-if="speaker_wav")
       textarea.mt-6(
         v-model="text"
         class="lg:mt-12"
@@ -111,7 +111,7 @@ export default {
       { text: 'German', value: 'de' },
       { text: 'Italian', value: 'it' },
       { text: 'Russian', value: 'ru' },
-      { text: 'Chinese', value: 'zh-cn' }
+      { text: 'Chinese (simplified)', value: 'zh-cn' }
     ],
     predictions: []
   }),
