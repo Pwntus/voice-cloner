@@ -16,8 +16,3 @@ REPLICATE_API_TOKEN=<token>
 npm install
 npm run dev
 ```
-
-## Demo Video
-
-[![Product Demo](https://github.com/suhasasumukh/voice-cloner/blob/main/readme-demo/thumbnil.png)](https://github.com/suhasasumukh/voice-cloner/blob/main/readme-demo/demo.mp4)
-
