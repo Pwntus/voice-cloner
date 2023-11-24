@@ -140,6 +140,7 @@ export default {
       background #666
 
   #modal
+    z-index 100
     padding 3rem
     position absolute
     top 0

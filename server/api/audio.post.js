@@ -14,6 +14,7 @@ export default defineEventHandler(async (event) => {
       speaker,
       text,
       language
+      // cleanup_voice: true
     }
 
     if (process.env.REPLICATE_USE_DEPLOYMENT) {
