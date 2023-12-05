@@ -16,3 +16,8 @@ REPLICATE_API_TOKEN=<token>
 npm install
 npm run dev
 ```
+
+## Demo Video
+
+[![Demo](./readme-demo/thumbnail.png)](./readme-demo/demo.mp4 "Demo")
+
