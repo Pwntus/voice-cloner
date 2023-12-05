@@ -56,11 +56,6 @@ export default defineNuxtConfig({
           hid: 'mobile-web-app-capable',
           name: 'mobile-web-app-capable',
           content: 'yes'
-        },
-        {
-          hid: 'apple-mobile-web-app-title',
-          name: 'apple-mobile-web-app-title',
-          content: 'pontus-sofia.fi'
         }
       ],
       script: [],
